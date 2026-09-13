@@ -4,7 +4,7 @@
 
 A GUI tool for running COLMAP photogrammetry pipelines optimized for drone footage and 3D Gaussian Splatting workflows with [LichtFeld Studio](https://lichtfeld.io).
 
-<img width="1917" height="1129" alt="screenshot" src="https://github.com/user-attachments/assets/cb7905a4-ae6f-4013-8e4f-665b97445dfd" />
+<img width="1917" height="1129" alt="screenshot" src="https://github.com/user-attachments/assets/afe40f58-5e47-4303-9049-5d0958dc8b86" />
 
 
 ---
@@ -52,7 +52,7 @@ The installer places **COLMAP Pipeline** alongside LichtFeld Studio and adds sho
 
 | Option | When to use |
 |---|---|
-| Flat / Perspective | Frames exported by [Framer](https://lichtfeld.io) (reprojected virtual cameras) |
+| Flat / Perspective | Frames extracted with a frame export tool (reprojected virtual cameras) |
 | Raw Fisheye | Unprocessed fisheye frames |
 
 **GPS / Location**
@@ -88,12 +88,12 @@ Drag the work folder into LichtFeld Studio to start 3DGS training.
 
 ## Recommended workflow
 
-This tool is designed to work alongside **Framer** — a drone footage processing tool that extracts frames from equirectangular 360° video, reprojects them to perspective virtual cameras, and writes GPS EXIF from SRT telemetry files.
+Extract frames from your drone footage using any frame export tool that writes GPS EXIF metadata. For best results, export perspective (flat) frames with GPS tags from the original telemetry.
 
 ```
-DJI Avata 360 footage
+Drone footage
         ↓
-    Framer  →  GPS-tagged perspective frames
+Frame export tool  →  GPS-tagged frames
         ↓
 COLMAP Pipeline  →  sparse reconstruction
         ↓
@@ -109,6 +109,6 @@ MIT — see [LICENSE](LICENSE)
 ---
 
 <p align="center">
-  Made with ☕ by <a href="https://lichtfeld.io">OpsAbove</a> ·
+  Made with ☕ by <a href="https://www.opsabove.com">OpsAbove</a> ·
   <a href="https://ko-fi.com/opsabove">Support on Ko-fi</a>
 </p>
